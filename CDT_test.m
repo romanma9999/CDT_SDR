@@ -3,18 +3,19 @@ clc
 clear all
 close all
 
-CDT_type = 2; % 0 is substructive, 1 is additive, 2 is combined
+CDT_type = 1; % 0 is substructive, 1 is additive, 2 is combined
 CDT_string{1} = "Substructive CDT: ";
 CDT_string{2} = "Additive CDT: ";
 CDT_string{3} = "Stable CDT: ";
 
 experiments = 50;
-N = 2048;
-nbits = 42;
+N = 2000;
+nbits = 40;
 
 sparsity = floor(100*nbits/N)/100;
 
-SS = [2:21];
+%SS = [2:16];
+SS = [2:10];
 NS = length(SS);
 expected_residual_ratio = zeros(1,NS);
 residual_sdr_mean_vec = zeros(1,NS);
